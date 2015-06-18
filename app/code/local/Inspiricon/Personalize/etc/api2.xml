@@ -1,0 +1,38 @@
+<config>
+    <api2>
+        <resource_groups>
+            <personalize translate="title" module="Inspiricon_Personalize">
+                <title>Markju API</title>
+                <sort_order>10</sort_order>
+            </personalize>
+        </resource_groups>
+        <resources>
+            <personalize translate="title" module="Inspiricon_Personalize">
+                <group>personalize</group>
+                <model>personalize/api2</model>
+                <title>API to communicate with the UI App</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <coupon_id>Coupon ID</coupon_id>
+                    <code>Code</code>
+                    <qty>Quantity</qty>
+                    <length>Length</length>
+                    <format>Format</format>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/coupondemo/rules/:rule_id/codes</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </personalize>
+        </resources>
+    </api2>
+</config>
